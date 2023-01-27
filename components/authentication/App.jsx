@@ -29,18 +29,10 @@ import {
         </Heading>
         <Text mt="4" mb="8" align="center" maxW="md" fontWeight="medium">
           <Text as="span">Anda belum memiliki akun?</Text>
-          <Link href="#">Daftar Sekarang!</Link>
+          <Link href="/signup">Daftar Sekarang!</Link>
         </Text>
         <Card>
           <LoginForm />
-          <DividerWithText mt="6">atau login menggunakan</DividerWithText>
-          <SimpleGrid mt="6" columns={1} spacing="3">
-            <Button color="currentColor" variant="outline">
-              <VisuallyHidden>Login with Google</VisuallyHidden>
-              <FaGoogle />
-              <Text ml={2}>Google</Text>
-            </Button>
-          </SimpleGrid>
         </Card>
       </Box>
     </Box>

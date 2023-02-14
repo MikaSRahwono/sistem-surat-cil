@@ -1,4 +1,4 @@
-import { App } from "../components/signup/app"
+import { App } from "../../components/requestSkpi/app"
 
 export default function Login() {
   return (

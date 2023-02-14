@@ -1,4 +1,4 @@
-import { Container, Box, Heading, Button } from "@chakra-ui/react"
+import { Container, Box, Heading, Button, Text, useColorModeValue, Link } from "@chakra-ui/react"
 import NextLink from 'next/link'
 
 export default function Home() {
@@ -12,14 +12,14 @@ export default function Home() {
         {/* HERO & CTA */}
         <Box display={{md: 'flex'}} mb={5} mt='15vh'>
           <Box flexGrow={1}>
-            <Heading as='h2' variant='page-title' mb={15} mt={25}>
+            <Heading as='h2'mb={15} mt={25}>
               Sistem Permintaan Surat CIL UI
             </Heading>
-            <p>Menyediakan layanan permintaan Surat Rekomendasi untuk mendukung kegiatan MBKM serta memberikan layanan pembuatan Lampiran Surat Keterangan Pendamping Ijazah untuk MBKM</p>
+            <Text>Menyediakan layanan permintaan Surat Rekomendasi untuk mendukung kegiatan MBKM serta memberikan layanan pembuatan Lampiran Surat Keterangan Pendamping Ijazah untuk MBKM</Text>
           </Box>
         </Box>
-        <NextLink href='/login' passHref>
-          <Button as="a">Login Sekarang</Button>
+        <NextLink href='/login' passHref >
+          <Button boxShadow='dark-lg' as="a" outline='none' bg='#F6DB00' _hover={{ bg: '#DBC200' }} color='gray.800'>Login Sekarang</Button>
         </NextLink>
       </Box>
       {/* Prosedur */}

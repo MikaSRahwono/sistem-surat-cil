@@ -1,30 +1,23 @@
 import {
-  Avatar,
   Box,
   Button,
-  Checkbox,
   FormControl,
-  FormHelperText,
-  FormErrorMessage,
   FormLabel,
   Heading,
-  HStack,
   Input,
   Stack,
   StackDivider,
   Text,
-  Textarea,
-  useColorModeValue,
   VStack,
-  Select
+  Select,
+  InputGroup,
+  InputRightElement,
+  Link
 } from '@chakra-ui/react'
 import * as React from 'react'
-import { HiCloudUpload } from 'react-icons/hi'
-import { FaGithub, FaGoogle } from 'react-icons/fa'
-import { FieldGroup } from './FieldGroup'
-import { CurrencySelect } from './CurrencySelect'
-import { LanguageSelect } from './LanguageSelect'
-import { Jurusan } from './Jurusan'
+import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
+import { FieldGroup } from './fieldGroup'
+import { Jurusan } from './jurusan'
 
 import { useState } from 'react'
 
@@ -34,6 +27,8 @@ export const App = () => {
   const fakultases = ["-- Pilih Fakultas --","Fakultas Kedokteran", "Fakultas Kedokteran Gigi", "Fakultas Kesehatan Masyarakat", "Fakultas Farmasi", "Fakultas Ilmu Keperawatan", "Fakultas Matematika dan Ilmu Pengetahuan Alam", "Fakultas Ilmu Komputer", "Fakultas Teknik", "Fakultas Hukum", "Fakultas Psikologi", "Fakultas Ilmu Sosial Ilmu Politik", "Fakultas Ilmu Pengetahuan Budaya", "Fakultas Ekonomi Bisnis", "Fakultas Ilmu Administrasi", "Program Vokasi"]
   const list_tahun_masuk = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023]
   const list_tahun_lulus = [2021, 2022, 2023, 2024, 2025, 2026, 2027]
+
+  const [showPassword, setShowPassword] = useState(false);
 
   const isNotFakultas = fakultas === "-- Pilih Fakultas --"
   return (
@@ -53,19 +48,19 @@ export const App = () => {
       }}
     >
       <Stack spacing="4" divider={<StackDivider />}>
-        <Heading size="lg" as="h1" paddingBottom="4">
-          Masukkan Data
-        </Heading>
+        <Stack pt={6}>
+          <Heading size="lg" as="h1" paddingBottom="4">
+            Masukkan Data
+          </Heading>
+          <Text align={'left'}>
+            Sudah Memiliki Akun? <Link color={'blue.400'} href="/login">Login Sekarang</Link>
+          </Text>
+        </Stack>
         <FieldGroup title="Data Pribadi">
           <VStack width="full" spacing="6">
             <FormControl id="name" isRequired>
               <FormLabel>Nama</FormLabel>
               <Input type="text" maxLength={255} />
-            </FormControl>
-
-            <FormControl id="email" isRequired>
-              <FormLabel>Email UI</FormLabel>
-              <Input type="email"/>
             </FormControl>
 
             <FormControl id="npm" isRequired>
@@ -106,6 +101,36 @@ export const App = () => {
             </FormControl>
           </VStack>
         </FieldGroup>
+        <FieldGroup title="Data Akun">
+          <VStack width="full" spacing="6">
+            <FormControl id="email" isRequired>
+              <FormLabel>Email UI</FormLabel>
+              <Input type="email"/>
+            </FormControl>
+            <FormControl id="password" isRequired>
+                <FormLabel>Password</FormLabel>
+                <InputGroup>
+                  <Input type={showPassword ? 'text' : 'password'} />
+                  <InputRightElement h={'full'}>
+                    <Button
+                      variant={'ghost'}
+                      onClick={() =>
+                        setShowPassword((showPassword) => !showPassword)
+                      }>
+                      {showPassword ? <ViewIcon /> : <ViewOffIcon />}
+                    </Button>
+                  </InputRightElement>
+                </InputGroup>
+              </FormControl>
+          </VStack>
+        </FieldGroup>
+        <Stack spacing={10} pt={2}>
+          <Button
+            loadingText="Submitting"
+            size="lg">
+            Sign up
+          </Button>
+        </Stack>
       </Stack>
     </form>
   </Box>

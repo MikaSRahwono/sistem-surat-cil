@@ -59,6 +59,7 @@ import {
             autoComplete="current-password"
             required
             {...props}
+            borderColor='gray.400'
           />
         </InputGroup>
       </FormControl>

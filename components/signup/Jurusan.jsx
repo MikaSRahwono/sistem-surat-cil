@@ -173,7 +173,7 @@ export const Jurusan = (props) => {
     }
     else {
         return (
-            <Select id="jurusan-vokasi" name="jurusan-vokasi">
+            <Select id="-" name="-">
                 <option value="-">-- Pilih Fakultas Terlebih Dahulu --</option>
             </Select>
         )

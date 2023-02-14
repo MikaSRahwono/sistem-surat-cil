@@ -48,8 +48,8 @@ const NavBar = props => {
             flexGrow={1}
             mt={{base: 4, nmd: 0}}
             >
-                <LinkItem href='/works' path={path}>MBKM</LinkItem>
-                <LinkItem href='/posts' path={path}>SKPI</LinkItem>
+                <LinkItem href='/mbkm' path={path}>MBKM</LinkItem>
+                <LinkItem href='/skpi' path={path}>SKPI</LinkItem>
             </Stack>
             <Box flex={1} align='right'>
                 <IconButton aria-label="Toggle theme" icon={useColorModeValue(<MoonIcon/>, <SunIcon/>)} onClick={toggleColorMode} colorScheme={useColorModeValue('purple', 'orange')} ></IconButton>

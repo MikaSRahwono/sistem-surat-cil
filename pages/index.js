@@ -18,9 +18,7 @@ export default function Home() {
             <Text>Menyediakan layanan permintaan Surat Rekomendasi untuk mendukung kegiatan MBKM serta memberikan layanan pembuatan Lampiran Surat Keterangan Pendamping Ijazah untuk MBKM</Text>
           </Box>
         </Box>
-        <NextLink href='/login' passHref >
-          <Button boxShadow='dark-lg' as="a" outline='none' bg='#F6DB00' _hover={{ bg: '#DBC200' }} color='gray.800'>Login Sekarang</Button>
-        </NextLink>
+        <Button href='/login' boxShadow='dark-lg' as="a" outline='none' bg='#F6DB00' _hover={{ bg: '#DBC200' }} color='gray.800'>Login Sekarang</Button>
       </Box>
       {/* Prosedur */}
       <Box mt={50}>

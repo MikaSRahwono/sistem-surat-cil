@@ -53,6 +53,7 @@ const NavBar = props => {
             </Stack>
             <Box flex={1} align='right'>
                 <IconButton aria-label="Toggle theme" icon={useColorModeValue(<MoonIcon/>, <SunIcon/>)} onClick={toggleColorMode} colorScheme={useColorModeValue('purple', 'orange')} ></IconButton>
+                <Button aria-label="Login" href='/login' ml={5}>Login</Button>
                 <Box ml={2} display={{base:'inline-block', md:'none'}}>
                     <Menu>
                         <MenuButton as={IconButton} icon={<HamburgerIcon/>} variant='outline' aria-label="Options" />

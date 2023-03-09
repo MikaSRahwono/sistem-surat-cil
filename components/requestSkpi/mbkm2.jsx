@@ -1,31 +1,19 @@
 import {
   Box,
-  Button,
   FormControl,
   FormLabel,
-  Heading,
   Input,
-  Stack,
-  StackDivider,
-  Text,
   VStack,
-  Select,
-  InputGroup,
-  InputRightElement,
-  Link
 } from '@chakra-ui/react'
 import * as React from 'react'
-import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 import { FieldGroup } from './fieldGroup'
-
 import { useState } from 'react'
-
 import { RangeDatepicker } from 'chakra-dayzed-datepicker';
 
 export const MBKM2 = (props) => {
     const mbkm2 = props.mbkm2
     const [selectedDates2, setSelectedDates2] = useState([new Date(), new Date()]);
-    
+
     if (mbkm2 == true) {
         return (
             <FieldGroup title="Data MBKM 2">

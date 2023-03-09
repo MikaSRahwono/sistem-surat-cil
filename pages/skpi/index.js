@@ -21,9 +21,7 @@ export default function Home() {
                 </Box>
             </Box>
             <Center mt={10}>
-                <NextLink href='/skpi/request' passHref >
-                <Button boxShadow='dark-lg' as="a" outline='none' bg='#F6DB00' _hover={{ bg: '#DBC200' }} color='gray.800'>Lakukan Permintaan</Button>
-                </NextLink>
+            <Button href='/skpi/request' boxShadow='dark-lg' as="a" outline='none' bg='#F6DB00' _hover={{ bg: '#DBC200' }} color='gray.800'>Lakukan Permintaan</Button>
             </Center>
         </Box>
       {/* Prosedur */}

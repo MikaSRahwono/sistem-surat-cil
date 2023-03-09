@@ -4,21 +4,21 @@ export const Jurusan = (props) => {
     const fakultas = props.fakultas
     if (fakultas == "Fakultas Kedokteran") {
         return (
-            <Select id="jurusan-fk" name="jurusan-fk">
+            <Select id="jurusan-fk" name="jurusan" onChange={event => props.handleChange(event)} value={props.jurusan}>
                 <option value="Ilmu Kedokteran">Ilmu Kedokteran</option>
             </Select>
         )
     }
     else if (fakultas == "Fakultas Kedokteran Gigi") {
         return (
-            <Select id="jurusan-fkg" name="jurusan-fkg">
+            <Select id="jurusan-fkg" name="jurusan" onChange={event => props.handleChange(event)} value={props.jurusan}>
                 <option value="Kedokteran Gigi">Kedokteran Gigi</option>
             </Select>
         )
     }
     else if (fakultas == "Fakultas Kesehatan Masyarakat") {
         return (
-            <Select id="jurusan-fkm" name="jurusan-fkm">
+            <Select id="jurusan-fkm" name="jurusan" onChange={event => props.handleChange(event)} value={props.jurusan}>
                 <option value="Gizi">Gizi</option>
                 <option value="Kesehatan Lingkungan">Kesehatan Lingkungan</option>
                 <option value="Keselamatan dan Kesehatan Kerja">Keselamatan dan Kesehatan Kerja</option>
@@ -28,28 +28,28 @@ export const Jurusan = (props) => {
     }
     else if (fakultas == "Fakultas Farmasi") {
         return (
-            <Select id="jurusan-ff" name="jurusan-ff">
+            <Select id="jurusan-ff" name="jurusan" onChange={event => props.handleChange(event)} value={props.jurusan}>
                 <option value="Ilmu Farmasi">Ilmu Farmasi</option>
             </Select>
         )
     }
     else if (fakultas == "Fakultas Ilmu Keperawatan") {
         return (
-            <Select id="jurusan-fik" name="jurusan-fik">
+            <Select id="jurusan-fik" name="jurusan" onChange={event => props.handleChange(event)} value={props.jurusan}>
                 <option value="Ilmu Keperawatan">Ilmu Keperawatan</option>
             </Select>
         )
     }
     else if (fakultas == "Fakultas Psikologi") {
         return (
-            <Select id="jurusan-psiko" name="jurusan-psiko">
+            <Select id="jurusan-psiko" name="jurusan" onChange={event => props.handleChange(event)} value={props.jurusan}>
                 <option value="Psikologi">Psikologi</option>
             </Select>
         )
     }
     else if (fakultas == "Fakultas Matematika dan Ilmu Pengetahuan Alam") {
         return (
-            <Select id="jurusan-fmipa" name="jurusan-fmipa">
+            <Select id="jurusan-fmipa" name="jurusan" onChange={event => props.handleChange(event)} value={props.jurusan}>
                 <option value="Matematika">Matematika</option>
                 <option value="Kimia">Kimia</option>
                 <option value="Fisika">Fisika</option>
@@ -64,7 +64,7 @@ export const Jurusan = (props) => {
     }
     else if (fakultas == "Fakultas Ilmu Komputer") {
         return (
-            <Select id="jurusan-fasilkom" name="jurusan-fasilkom">
+            <Select id="jurusan-fasilkom" name="jurusan" onChange={event => props.handleChange(event)} value={props.jurusan}>
                 <option value="Ilmu Komputer">Ilmu Komputer</option>
                 <option value="Sistem Informasi">Sistem Informasi</option>
             </Select>
@@ -72,7 +72,7 @@ export const Jurusan = (props) => {
     }
     else if (fakultas == "Fakultas Teknik") {
         return (
-            <Select id="jurusan-ft" name="jurusan-ft">
+            <Select id="jurusan-ft" name="jurusan" onChange={event => props.handleChange(event)} value={props.jurusan}>
                 <option value="Teknik Sipil">Teknik Sipil</option>
                 <option value="Teknik Lingkungan">Teknik Lingkungan</option>
                 <option value="Teknik Mesin">Teknik Mesin</option>
@@ -91,14 +91,14 @@ export const Jurusan = (props) => {
     }
     else if (fakultas == "Fakultas Hukum") {
         return (
-            <Select id="jurusan-fh" name="jurusan-fh">
+            <Select id="jurusan-fh" name="jurusan" onChange={event => props.handleChange(event)} value={props.jurusan}>
                 <option value="Ilmu Hukum">Ilmu Hukum</option>
             </Select>
         )
     }
     else if (fakultas == "Fakultas Ilmu Sosial Ilmu Politik") {
         return (
-            <Select id="jurusan-fisip" name="jurusan-fisip">
+            <Select id="jurusan-fisip" name="jurusan" onChange={event => props.handleChange(event)} value={props.jurusan}>
                 <option value="Ilmu Komunikasi">Ilmu Komunikasi</option>
                 <option value="Ilmu Politik">Ilmu Politik</option>
                 <option value="Kriminologi">Kriminologi</option>
@@ -111,7 +111,7 @@ export const Jurusan = (props) => {
     }
     else if (fakultas == "Fakultas Ilmu Pengetahuan Budaya") {
         return (
-            <Select id="jurusan-fib" name="jurusan-fib">
+            <Select id="jurusan-fib" name="jurusan" onChange={event => props.handleChange(event)} value={props.jurusan}>
                 <option value="Arkeologi">Arkeologi</option>
                 <option value="Sejarah">Sejarah</option>
                 <option value="Ilmu Filsafat">Ilmu Filsafat</option>
@@ -132,7 +132,7 @@ export const Jurusan = (props) => {
     }
     else if (fakultas == "Fakultas Ekonomi Bisnis") {
         return (
-            <Select id="jurusan-feb" name="jurusan-feb">
+            <Select id="jurusan-feb" name="jurusan" onChange={event => props.handleChange(event)} value={props.jurusan}>
                 <option value="Ilmu Ekonomi">Ilmu Ekonomi</option>
                 <option value="Manajemen">Manajemen</option>
                 <option value="Akuntansi">Akuntansi</option>
@@ -143,7 +143,7 @@ export const Jurusan = (props) => {
     }
     else if (fakultas == "Fakultas Ilmu Administrasi") {
         return (
-            <Select id="jurusan-fia" name="jurusan-fia">
+            <Select id="jurusan-fia" name="jurusan" onChange={event => props.handleChange(event)} value={props.jurusan}>
                 <option value="Ilmu Administrasi Negara">Ilmu Administrasi Negara</option>
                 <option value="Ilmu Administrasi Niaga">Ilmu Administrasi Niaga</option>
                 <option value="Ilmu Administrasi Fiskal">Ilmu Administrasi Fiskal</option>
@@ -152,7 +152,7 @@ export const Jurusan = (props) => {
     }
     else if (fakultas == "Program Vokasi") {
         return (
-            <Select id="jurusan-vokasi" name="jurusan-vokasi">
+            <Select id="jurusan-vokasi" name="jurusan" onChange={event => props.handleChange(event)} value={props.jurusan}>
                 <option value="Administrasi Asuransi dan Aktuaria">Administrasi Asuransi dan Aktuaria</option>
                 <option value="Administrasi Keuangan dan Perbankan">Administrasi Keuangan dan Perbankan</option>
                 <option value="Administrasi Perkantoran dan Sekretari">Administrasi Perkantoran dan Sekretari</option>
